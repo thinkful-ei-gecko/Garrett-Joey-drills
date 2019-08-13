@@ -88,3 +88,13 @@ const mudWarning = hazardWarningCreator('Mud on the Road');
 rocksWarning('Main St and Pacific Ave');
 waterWarning('Centinela Ave and Olympic Blvd');
 mudWarning('Hyde st and Main st');
+
+const turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+
+const movements = turtleMoves.filter(movePair => movePair[0] >= 0 && movePair[1] >= 0);
+
+const steps = movements.map(steps => steps[0] + steps[1]);
+
+steps.forEach((val , i) => {
+  console.log(`Movement ${index +1}: ${val} steps`);
+});
